@@ -2,6 +2,9 @@
 
 Through the Time Lens is a Python-based web application I built using Streamlit that aims to provide users with fun and interesting insights about their age in various contexts. It presents a unique perspective on your age - from what your age would be on different planets, who was the US President when you were born, to the value of a dollar at your birth.
 
+You can access the app through the following link:
+https://your-age-insights.streamlit.app/
+
 ## Installation and Running
 
 The web app requires several libraries to be installed. The required libraries are listed in the `requirements.txt` file. 
