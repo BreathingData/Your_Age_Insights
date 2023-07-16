@@ -123,7 +123,7 @@ def plot_population_increase(birth_year_pop, population_inc):
     # combine the plots
     data = [trace1, trace2]
     # create a layout
-    layout = go.Layout(title='World Population Increase Since Your Birth',
+    layout = go.Layout(title=dict(text='Your age compared to the average age in selected countries', font=dict(color='white')),
                        xaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
                        yaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
                        plot_bgcolor='rgba(0,0,0,0)',
@@ -218,7 +218,7 @@ if submit_button:
             name=''
         )
         # create the layout
-        layout = go.Layout(title='Your age compared to the average age in selected countries',
+        layout = go.Layout(title=dict(text='Your age compared to the average age in selected countries', font=dict(color='white')),
             showlegend=False,
             hovermode='closest',
             yaxis=dict(
@@ -281,7 +281,7 @@ if submit_button:
             )
         # customize the layout
         fig.update_layout(
-            title_text='Your Age on Different Planets',
+            title=dict(text='Your Age on Different Planets', font=dict(color='white')),
             xaxis_title='',
             xaxis={'visible': False},  # this hides the x-axis
             yaxis_title='',
@@ -347,7 +347,7 @@ if submit_button:
         )])
         # customize the layout
         fig.update_layout(
-            title_text='Global Surface Temperature (Compared to 1951-1980 Average)',
+            title=dict(text='Your age compared to the average age in selected countries', font=dict(color='white')),
             xaxis_title='Year',
             yaxis_title='Temperature (°C)',
             plot_bgcolor='rgba(0,0,0,0)',
@@ -416,7 +416,7 @@ if submit_button:
             height=400,
             width=600,
             xaxis=dict(visible=False),
-            title_text="How much $1 at birth worth today?",
+            title=dict(text='How much $1 at birth worth today?', font=dict(color='white')),
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)'
         )
@@ -448,7 +448,7 @@ if submit_button:
         fig = go.Figure(
             data=[go.Scatter(x=[0], y=[0], mode='markers', marker=dict(size=1, color='black'))],
             layout=go.Layout(height=200, width=500,
-                title="Guess who was the US president at your birth?",
+                title=dict(text='Guess who was the US president at your birth?', font=dict(color='white')),
                 xaxis=dict(visible=False),
                 yaxis=dict(visible=False),
                 plot_bgcolor='rgba(0,0,0,0)',
@@ -485,7 +485,7 @@ if submit_button:
         fig = go.Figure(
             data=[go.Scatter(x=[0], y=[0], mode='markers', marker=dict(size=1, color='black'))],
             layout=go.Layout(height=200, width=500,
-                             title="Guess who was the last FIFA World Cup winner at your birth?",
+                             title=dict(text='Guess who was the last FIFA World Cup winner at your birth?', font=dict(color='white')),
                              xaxis=dict(visible=False),
                              yaxis=dict(visible=False),
                              plot_bgcolor='rgba(0,0,0,0)',
@@ -527,7 +527,7 @@ if submit_button:
         fig = go.Figure(
             data=[go.Scatter(x=[0], y=[0], mode='markers', marker=dict(size=1, color='black'))],
             layout=go.Layout(height=200, width=500,
-                             title="Guess the second largest economy by average GDP at your birth?",
+                             title=dict(text='Guess the second largest economy by average GDP at your birth?', font=dict(color='white')),
                              xaxis=dict(visible=False),
                              yaxis=dict(visible=False),
                              plot_bgcolor='rgba(0,0,0,0)',
