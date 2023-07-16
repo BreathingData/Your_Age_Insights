@@ -5,11 +5,12 @@ import streamlit as st
 import datetime
 import plotly.graph_objects as go
 
-# Background color
+# Background and text color
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #0E1117;
+    color: #FFFFFF;
     }
 </style>
 '''
@@ -125,6 +126,8 @@ def plot_population_increase(birth_year_pop, population_inc):
     layout = go.Layout(title='World Population Increase Since Your Birth',
                        xaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
                        yaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
+                       plot_bgcolor='rgba(0,0,0,0)',
+                       paper_bgcolor='rgba(0,0,0,0)',
                        showlegend=True)
     # combine data and layout into a figure
     fig = go.Figure(data=data, layout=layout)
@@ -227,7 +230,9 @@ if submit_button:
                 showgrid=False,
                 zeroline=False,
                 showticklabels=False
-            )
+            ),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)'
         )
         # add the traces to the figure
         fig = go.Figure(data=[trace_countries, trace_user], layout=layout)
@@ -411,7 +416,9 @@ if submit_button:
             height=400,
             width=600,
             xaxis=dict(visible=False),
-            title_text="How much $1 at birth worth today?"
+            title_text="How much $1 at birth worth today?",
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)'
         )
         # display the plot in Streamlit
         st.plotly_chart(fig, config={'displayModeBar': False})
@@ -444,6 +451,8 @@ if submit_button:
                 title="Guess who was the US president at your birth?",
                 xaxis=dict(visible=False),
                 yaxis=dict(visible=False),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
                 hovermode='closest',
                 annotations=[
                     dict(
@@ -479,6 +488,8 @@ if submit_button:
                              title="Guess who was the last FIFA World Cup winner at your birth?",
                              xaxis=dict(visible=False),
                              yaxis=dict(visible=False),
+                             plot_bgcolor='rgba(0,0,0,0)',
+                             paper_bgcolor='rgba(0,0,0,0)',
                              hovermode='closest',
                              annotations=[
                                  dict(
@@ -519,6 +530,8 @@ if submit_button:
                              title="Guess the second largest economy by average GDP at your birth?",
                              xaxis=dict(visible=False),
                              yaxis=dict(visible=False),
+                             plot_bgcolor='rgba(0,0,0,0)',
+                             paper_bgcolor='rgba(0,0,0,0)',
                              hovermode='closest',
                              annotations=[
                                  dict(
