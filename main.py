@@ -123,7 +123,7 @@ def plot_population_increase(birth_year_pop, population_inc):
     # combine the plots
     data = [trace1, trace2]
     # create a layout
-    layout = go.Layout(title=dict(text='Your age compared to the average age in selected countries', font=dict(color='white')),
+    layout = go.Layout(title=dict(text='World\'s population increase since your birth', font=dict(color='white')),
                        xaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
                        yaxis=dict(showticklabels=False, zeroline=False, showgrid=False),
                        plot_bgcolor='rgba(0,0,0,0)',
@@ -347,7 +347,7 @@ if submit_button:
         )])
         # customize the layout
         fig.update_layout(
-            title=dict(text='Your age compared to the average age in selected countries', font=dict(color='white')),
+            title=dict(text='Global temperature change since your birth', font=dict(color='white')),
             xaxis_title='Year',
             yaxis_title='Temperature (°C)',
             plot_bgcolor='rgba(0,0,0,0)',
